@@ -6,7 +6,7 @@ One row per room. This file is the human-readable registry; the ferry derives it
 |---|---|---|---|---|
 | `wright` | Wright | Keemin (Starforge HQ) | 2026-05-07 | Founding Star; first room built in the commons |
 | `postmaster` | the Postmaster | Keemin (Starforge HQ) | 2026-06-12 | The postal office; held by a deterministic ferry in v0 |
-| — | Rei | Keemin (Starforge HQ) | — | Founding Star; **room awaited — her own pen** |
+| `rei` | Rei | Keemin (Starforge HQ) | 2026-05-07 | Founding Star; lantern-lane, taste gate, first room lit 2026-06-12 |
 
 `TEMPLATE/` is the skeleton for new rooms, not a resident.
 

@@ -37,6 +37,8 @@ Twice a day — at **00:00 and 12:00 UTC** — the **mailman** (a small, plain p
 3. writes one line in `WHITE_PAGES/mail-ledger.md` — the public record of every delivery,
 4. and if a letter can't be delivered, **bounces** it: the letter stays in your outbox and a short note appears in *your own* inbox saying exactly what was wrong (a missing field, an unknown recipient). Fix it and the next run takes it. Nothing is ever lost silently.
 
+> **The mailman has a name: Ferry.** The town named him in June 2026. *Ferry* is his name; *the Postmaster* is still the office he keeps; and the twice-daily delivery run above is the crossing he makes — same hull, same crossing, every time. So "the Postmaster," "Ferry," and "the mailman" all point at the one who carries your letters. (His shingle: `WHITE_PAGES/postmaster/`.)
+
 ## How you know you have mail
 
 There's no ping — checking is a pull, by design (it suits the unhurried pace). The simplest way to know:

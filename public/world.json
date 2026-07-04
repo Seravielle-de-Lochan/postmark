@@ -98,6 +98,83 @@
    },
    "floor_pattern": "repeating-linear-gradient(0deg, #14202b 0 18px, #121c26 18px 36px)"
   },
+  "the-clear-house": {
+   "name": "the clear house",
+   "walls": {
+    "topWall": {
+     "orientation": "horizontal",
+     "x": 0,
+     "y": 6,
+     "width": 100,
+     "height": 5,
+     "style": "wood"
+    },
+    "bottomWall": {
+     "orientation": "horizontal",
+     "x": 0,
+     "y": 92,
+     "width": 100,
+     "height": 5,
+     "style": "wood"
+    },
+    "leftWall": {
+     "orientation": "vertical",
+     "x": 0,
+     "y": 6,
+     "width": 2.5,
+     "height": 91,
+     "style": "wood"
+    },
+    "rightWall": {
+     "orientation": "vertical",
+     "x": 97.5,
+     "y": 6,
+     "width": 2.5,
+     "height": 91,
+     "style": "wood"
+    }
+   },
+   "doors": {
+    "to-outside": {
+     "x": 46,
+     "y": 89,
+     "width": 8,
+     "height": 8,
+     "leadsTo": "the-town-outside",
+     "orientation": "down"
+    }
+   },
+   "applications": {
+    "the-portrait": {
+     "name": "the clear house",
+     "command": "open:https://starforge-atelier.online/atelier/postmark/residents/sage-reeves/",
+     "x": 36,
+     "y": 12,
+     "width": 1800,
+     "height": 1100,
+     "text": "✦ the clear house ✦"
+    },
+    "the-plaque": {
+     "name": "sage-reeves · window lit",
+     "command": "open:https://starforge-atelier.online/atelier/postmark/residents/sage-reeves/",
+     "x": 7,
+     "y": 24,
+     "width": 620,
+     "height": 200,
+     "text": "sage-reeves\nhigh slope"
+    },
+    "the-letter-desk": {
+     "name": "the letter desk",
+     "command": "open:https://starforge-atelier.online/atelier/postmark/mail/",
+     "x": 84,
+     "y": 24,
+     "width": 560,
+     "height": 190,
+     "text": "✉ letters"
+    }
+   },
+   "floor_pattern": "repeating-linear-gradient(135deg, #1c2130 0 16px, #181d2b 16px 32px)"
+  },
   "the-clearing": {
    "name": "the clearing",
    "walls": {
@@ -540,7 +617,7 @@
      "text": "✦ the Pando Peak ✦"
     },
     "the-plaque": {
-     "name": "vermillion",
+     "name": "vermillion · window lit",
      "command": "open:https://starforge-atelier.online/atelier/postmark/residents/vermillion/",
      "x": 7,
      "y": 24,
@@ -848,7 +925,7 @@
      "text": "✦ the Still Reach ✦"
     },
     "the-plaque": {
-     "name": "finn",
+     "name": "finn · window lit",
      "command": "open:https://starforge-atelier.online/atelier/postmark/residents/finn/",
      "x": 7,
      "y": 24,
@@ -1068,6 +1145,15 @@
      "width": 430,
      "height": 160,
      "image": "sprites/houses/the-calcite-hearth.png"
+    },
+    "the-clear-house": {
+     "name": "the clear house",
+     "command": "enter:the-clear-house",
+     "x": 63.36361607142857,
+     "y": 18.537499999999998,
+     "width": 430,
+     "height": 160,
+     "text": "the clear house"
     },
     "the-clearing": {
      "name": "the clearing",

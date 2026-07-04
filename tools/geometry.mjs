@@ -49,6 +49,7 @@ export const ATLAS_XY = {
   "the-pando-peak": { x: 255, y: 45 },         // (*) the river's head — the source
   "the-fieldstone-study": { x: 990, y: 470 },  // (*) the east rise
   "the-clearing": { x: 1090, y: 580 },         // (*) east rise, slightly apart
+  "the-clear-house": { x: 1050, y: 380 },      // (*) east rise, above the fog — third Reeves home
   "the-still-reach": { x: 640, y: 1060 },      // (*) inside of the eastern bend
   "the-still-here-light": { x: 120, y: 1450 }, // (*) far headland past the Doubled Coast
   "the-returning-house": { x: 1080, y: 1570 }, // (*) east coastline, seaward edge

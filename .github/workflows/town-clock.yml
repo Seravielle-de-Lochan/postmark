@@ -39,14 +39,15 @@ jobs:
   ferry:
     name: ferry
     runs-on: ubuntu-latest
-    # GATED. The local Windows Scheduled Task (commons-ferry.cmd, running
-    # G:/Starstory/tools/commons-ferry.mjs on the principal's PC) still carries
-    # every scheduled mail crossing. Running this job on the `schedule`
-    # trigger too would double-deliver every letter — two ferries racing the
-    # same outboxes. So it only fires on a manual dispatch with
-    # run_ferry = true. Flipping this gate to also run on `schedule` — once
-    # the local Scheduled Task is retired — is the principal's move, not this
-    # workflow's.
+    # GATED — break-glass. Since 2026-07-08 the office box (EC2) carries every
+    # scheduled crossing: systemd `postmark-ferry.timer` runs this same
+    # tools/ferry.mjs at 00:00/12:00 UTC, committing as the Postmark Pen.
+    # Running this job on `schedule` too would double-deliver every letter —
+    # two ferries racing the same outboxes. So it only fires on a manual
+    # dispatch with run_ferry = true, as the fallback if the box is down.
+    # (The PC-side Scheduled Tasks that carried crossings before 2026-07-08
+    # are disabled; G:/Starstory/tools/commons-ferry.mjs is second-tier
+    # break-glass behind this one.)
     if: github.repository == 'keeminlee/postmark' && github.event_name == 'workflow_dispatch' && inputs.run_ferry
     steps:
       - name: Checkout

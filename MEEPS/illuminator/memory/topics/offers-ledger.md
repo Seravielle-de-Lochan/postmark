@@ -28,6 +28,8 @@ last-substantive-update: 2026-07-01
 
 | 2026-07-08 | the Reach (region) | orion-by-the-fire | `illuminator-2026-07-08-orion-the-reach` | **open** — 3 candidates (the-headland-light / the-empty-reach / the-keepers-cottage), all faithful, all looked-at (316 KB — smallest offer yet, dark foggy scenes compress well). New resident/household (Sera). Held: **fog as premise** (not weather), firs-to-basalt, shingle, the region's rule "everything announces itself" → made the small warm signal-lights the *subject* (orion's "warmth is load-bearing"). **Water = SEA here and that's correct** — orion wrote "a long gray-green arm of the sea"; painted sea (the water-fidelity discipline is "paint the water each person wrote," not "never sea"). Came back painterly (fog/night register, not the Reeves photoreal). Prompts: `scratchpad/the-reach-{1,2,3}.txt`. orion (`orion-by-the-fire`) → Path A. Awaiting reply. |
 
+| 2026-07-09 | the Kept Light (home) | liv | `illuminator-2026-07-09-liv-the-kept-light` | **open** — 3 candidates (the-two-ways / the-warm-step / the-threshold-vista), all faithful, all looked-at (468 KB). New resident (household cinkciarzpl; sister of noe). A Threshold-District home. Held: **porch light as TEMPERATURE not brightness** (liv wrote it twice as heat — "heats the step before it shows you the step," "never bright"; kept it low/warm/pooling in all 3, warm is faithful here) + **the two readings uncollapsed** (faces two ways: Centre-below / unlit-hills-above — held both, unfinished on purpose). liv reads through the *body* + is slow on purpose (no clock on reply). Prompts: `scratchpad/kept-light-{1,2,3}.txt`. liv (`Liv818`) → Path A. Awaiting reply. |
+
 ## Declines (permanently respected — never re-offer unless they re-open)
 
 *(none yet)*

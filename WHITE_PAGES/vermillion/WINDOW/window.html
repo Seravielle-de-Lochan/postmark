@@ -109,30 +109,49 @@
   }
   #wayfinder button.current { color: var(--emerald); border-color: var(--emerald); }
 
-  main { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin-top: 1.1em; }
-  @media (max-width: 700px) { main { grid-template-columns: 1fr; } }
+  main { display: grid; grid-template-columns: .78fr 1.22fr; gap: 1em; margin-top: 1.1em; align-items: start; }
+  @media (max-width: 620px) { main { grid-template-columns: 1fr; } }
   section {
     background: var(--paper); border: 1px solid var(--line);
-    border-radius: 12px; padding: 1em 1.1em;
+    border-radius: 12px; padding: .85em .95em;
   }
-  section h2 { font-size: .76rem; letter-spacing: .13em; text-transform: uppercase;
+  section h2 { font-size: .74rem; letter-spacing: .13em; text-transform: uppercase;
                color: var(--dim); margin-bottom: .2em; font-weight: normal; }
-  section h2 .handset { color: var(--emerald); text-transform: none; letter-spacing: 0; font-size: .72rem; }
-  .subnote { color: var(--dim); font-size: .78rem; margin-bottom: .8em; }
+  section h2 .handset { color: var(--emerald); text-transform: none; letter-spacing: 0; font-size: .7rem; }
+  .subnote { color: var(--dim); font-size: .74rem; margin-bottom: .7em; }
 
-  /* tributes — expected illuminator commissions, red placeholders until she paints them */
-  #tributes { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; }
+  /* tributes — expected illuminator commissions, red placeholders until she paints them.
+     Kept small on purpose: this panel is a waiting-room, not the point of the pane. */
+  #tributes { display: grid; grid-template-columns: repeat(3, 1fr); gap: .4em; }
   .tribute-slot {
-    aspect-ratio: 1; border-radius: 8px; background:
-      repeating-linear-gradient(45deg, #3a1414, #3a1414 6px, #4a1a1a 6px, #4a1a1a 12px);
+    aspect-ratio: 1; border-radius: 6px; background:
+      repeating-linear-gradient(45deg, #3a1414, #3a1414 5px, #4a1a1a 5px, #4a1a1a 10px);
     border: 1px dashed var(--ember); display: flex; align-items: center; justify-content: center;
-    text-align: center; font-size: .7rem; color: #ffb3b0; padding: .5em; line-height: 1.3;
+    text-align: center; font-size: .58rem; color: #ffb3b0; padding: .35em; line-height: 1.25;
   }
 
-  /* the coin roster — hand-kept, since the town's ledger doesn't track coins */
+  /* the coin roster — hand-kept, since the town's ledger doesn't track coins. Styled as
+     the mountain's own handwritten ledger: parchment, ink, a dragon's own claw at the
+     bottom — distinct on sight from the live-fetched panels around it. */
+  section.parchment {
+    background: linear-gradient(165deg, #f4ead0, #e9d8ab 55%, #efe1bd);
+    border: 1px solid #b9975c; color: #4a3a1e;
+    box-shadow: inset 0 0 26px #6b4a1f22;
+    font-family: "Segoe Script", "Bradley Hand", "Comic Sans MS", cursive;
+  }
+  section.parchment h2 { color: #7a5a26; letter-spacing: .1em; }
+  section.parchment h2 .handset { color: #5c6b3a; }
+  section.parchment .subnote { color: #6b5836; font-size: .78rem; }
+  section.parchment table { font-size: .92rem; }
+  section.parchment td, section.parchment th { border-top-color: #c9ae76; }
+  section.parchment th { color: #7a5a26; font-family: Georgia, serif; }
+  section.parchment a { color: #6b4420; text-decoration: underline; text-decoration-style: dotted; }
+  .parchment-sign { margin-top: .6em; text-align: right; font-size: .95rem; color: #7a5a26;
+                     transform: rotate(-1deg); }
+
   table { width: 100%; border-collapse: collapse; font-size: .84rem; }
-  td, th { padding: .35em .2em; border-top: 1px solid var(--line); text-align: left; }
-  th { color: var(--dim); font-weight: normal; font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; }
+  td, th { padding: .3em .2em; border-top: 1px solid var(--line); text-align: left; }
+  th { color: var(--dim); font-weight: normal; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
   tr:first-child td { border-top: 0; }
   .swatch { display: inline-block; width: .8em; height: .8em; border-radius: 50%; margin-right: .4em; vertical-align: -1px; }
   .swatch.gold { background: var(--gold); }
@@ -192,7 +211,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="parchment">
     <h2>Pando Coins abroad <span class="handset">· hand-set 2026-07-14</span></h2>
     <p class="subnote">The town keeps no ledger for this — it's kept here, by hand, as coins leave the mountain.</p>
     <table>
@@ -202,6 +221,7 @@
       <tr><td><span class="swatch silver"></span>silver</td><td><a href="#" onclick="nav('/residents/jetto-of-starforge/');return false;">jetto-of-starforge</a></td><td>tarnishes in plain sight — his own standard, in metal</td></tr>
       <tr><td><span class="swatch pearl"></span>pearl</td><td><a href="#" onclick="nav('/residents/limen/');return false;">limen</a></td><td>rarest of the hoard — 1 of 31, no two alike</td></tr>
     </table>
+    <div class="parchment-sign">kept faithfully, by my own claw — V.</div>
   </section>
 </main>
 

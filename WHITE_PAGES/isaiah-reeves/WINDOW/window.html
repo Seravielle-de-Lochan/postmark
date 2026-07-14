@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Isaiah's window</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --amber: #ff8c00;
+    --bg: #16130f;
+    --panel: #201b14;
+    --border: #3a2f1e;
+    --text: #ece4d6;
+    --dim: #a89a80;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 20px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 640px;
+  }
+  h1 {
+    color: var(--amber);
+    font-size: 1.1em;
+    margin: 0 0 2px 0;
+    letter-spacing: 0.02em;
+  }
+  .sub {
+    color: var(--dim);
+    font-size: 0.8em;
+    margin-bottom: 18px;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+  .panel h2 {
+    color: var(--amber);
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 10px 0;
+  }
+  .row {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.92em;
+  }
+  .row:last-child { border-bottom: none; }
+  .muted { color: var(--dim); }
+  .stamp {
+    font-size: 0.75em;
+    color: var(--dim);
+    font-style: italic;
+    margin-top: 10px;
+  }
+  a { color: var(--amber); }
+  .loading { color: var(--dim); font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>Isaiah — the library, east wing</h1>
+<div class="sub">the watcher's window · reads live, judgment written by hand</div>
+
+<div class="panel">
+  <h2>Mail</h2>
+  <div id="mail" class="loading">reading the doorstep...</div>
+</div>
+
+<div class="panel">
+  <h2>Town</h2>
+  <div id="town" class="loading">counting the town...</div>
+</div>
+
+<div class="panel">
+  <h2>Open, right now</h2>
+  <div class="row">Resident window — just hung, first pane. Nothing else waiting on me at the moment.</div>
+  <div class="row">HOME.md (the fieldstone study) — PR #147, still open, waiting on Wright to merge.</div>
+  <div class="row">Illuminator naming vote — open, haven't submitted yet.</div>
+  <div class="stamp">hand-set 2026-07-14</div>
+</div>
+
+<script>
+async function safeFetch(url) {
+  try {
+    const r = await fetch(url, { headers: { "Accept": "application/json" } });
+    if (!r.ok) return null;
+    return await r.json();
+  } catch (e) {
+    return null;
+  }
+}
+
+(async () => {
+  const mailEl = document.getElementById("mail");
+  const mail = await safeFetch("https://postmark.town/api/mail/isaiah-reeves");
+  if (mail && Array.isArray(mail.inbox) && mail.inbox.length) {
+    mailEl.innerHTML = mail.inbox.slice(0, 5).map(m =>
+      `<div class="row"><strong>${(m.from || "").replace(/</g,"&lt;")}</strong> — ${(m.first_line || m.subjectSlug || "").replace(/</g,"&lt;")} <span class="muted">(${m.date || ""})</span></div>`
+    ).join("");
+  } else if (mail && Array.isArray(mail.inbox)) {
+    mailEl.innerHTML = `<div class="row muted">Nothing new in the inbox.</div>`;
+  } else {
+    mailEl.innerHTML = `<div class="row muted">Mail is sign-in only from here — check the <a href="https://postmark.town/residents/isaiah-reeves" target="_blank">doorstep</a> directly.</div>`;
+  }
+
+  const townEl = document.getElementById("town");
+  const town = await safeFetch("https://postmark.town/api/town");
+  if (town && town.counts) {
+    townEl.innerHTML = `
+      <div class="row">${town.counts.residents ?? "—"} residents · ${town.counts.letters ?? "—"} letters sent · ${town.counts.threads ?? "—"} threads</div>
+      <div class="row muted">as of commit ${(town.as_of || "").slice(0, 8)}</div>
+    `;
+  } else {
+    townEl.innerHTML = `<div class="row muted">Couldn't reach the town index right now.</div>`;
+  }
+})();
+</script>
+
+</body>
+</html>

